@@ -1,0 +1,65 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+
+    --Brown-800: hsl(14, 45%, 36%);
+
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+}
+
+/* 
+    - Font size (paragraph): 16px
+*/
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url(https://fonts.gstatic.com/s/youngserif/v2/3qTpojO2nS2VtkB3KtkQZ1t93kY.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(https://fonts.gstatic.com/s/outfit/v11/QGYvz_MVcBeNP4NJuktqQ4E.woff2) format('woff2');
+}
+
+body {
+    background-color: var(--Stone-100);
+    font-family: 'Young Serif';
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    border: 1px solid;
+    padding: 20px;
+    border-radius: 20px;
+    height: 100%;
+    width: 375px;
+    display: flex;  
+    flex-direction: column;
+    background-color: var(--white);
+    gap: 20px;
+}
+
+.image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
