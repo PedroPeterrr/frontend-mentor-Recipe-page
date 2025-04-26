@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
 :root {
     --white: hsl(0, 0%, 100%);
     --Stone-100: hsl(30, 54%, 90%);
@@ -11,11 +12,17 @@
     --Rose-50: hsl(330, 100%, 98%);
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 /* 
     - Font size (paragraph): 16px
 */
 
-@font-face {
+/* @font-face {
     font-family: 'Young Serif';
     src: url(https://fonts.gstatic.com/s/youngserif/v2/3qTpojO2nS2VtkB3KtkQZ1t93kY.woff2) format('woff2');
 }
@@ -23,11 +30,11 @@
 @font-face {
     font-family: 'Outfit';
     src: url(https://fonts.gstatic.com/s/outfit/v11/QGYvz_MVcBeNP4NJuktqQ4E.woff2) format('woff2');
-}
+} */
 
 body {
     background-color: var(--Stone-100);
-    font-family: 'Young Serif';
+    font-family: 'Outfit', sans-serif;
     font-size: 16px;
 }
 
@@ -35,18 +42,148 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 3rem;
 }
 
 .container {
-    border: 1px solid;
-    padding: 20px;
+    border: 1px solid transparent;
+    padding: 30px;
     border-radius: 20px;
     height: 100%;
-    width: 375px;
+    width: 750px;
     display: flex;  
     flex-direction: column;
     background-color: var(--white);
     gap: 20px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 2.75rem;
+    color: var(--Stone-900);
+    font-weight: 400;
+    font-family: 'Young Serif';
+}
+
+.details {
+    background-color: var(--Rose-50);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.details ul, 
+.ingredients ul,
+.instructions ol{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding-left: 10px;
+    color: var(--Stone-600);
+}
+
+.details ul li,
+.ingredients ul li {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.bullet {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+
+.bullet-rose {
+    background-color: var(--Rose-800);
+}
+
+.number {
+    color: var(--Brown-800);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.30rem;
+    color: var(--Rose-800);
+    font-weight: 600;
+}
+
+.ingredients{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--Stone-600);
+}
+
+.ingredients ul {
+    gap:10px;
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--Brown-800);
+    font-weight: 400;
+    font-family: 'Young Serif';
+}
+
+.description {
+    color: var(--Stone-600);
+    font-weight: 400;
+    font-family: 'Outfit';
+}
+
+.instructions {
+    line-height: 150%;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.instructions li {
+    display: flex;
+    gap: 15px;
+}
+
+.nutrition-table {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--Stone-600);
+    padding: 10px;
+}
+
+tr {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--Stone-150);
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+.data,
+.value {
+    display: flex;
+    padding: 10px 30px;
+
+    width: 100%;
+}
+
+.value{
+    color: var(--Brown-800);
+    font-weight: 700;
+    padding-left: 0;
 }
 
 .image {
@@ -55,6 +192,7 @@ main {
 }
 
 .attribution { 
+    padding: 10px;
     font-size: 11px; 
     text-align: center; 
 }
@@ -62,4 +200,52 @@ main {
 .attribution a { 
     color: hsl(228, 45%, 44%); 
     text-decoration: none;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--Stone-150);
+    margin: 20px 0;
+}
+
+@media (max-width: 375px) {
+
+    main {
+        margin: 0;
+        padding: 0;
+    }   
+    
+    .container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .text-container {
+        padding: 0 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.50rem;
+    }
+
+    .image {
+        width: 100%;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    hr {
+        margin: 0;
+    }
+
+    .attribution {
+        background-color: var(--white);
+    }
 }
